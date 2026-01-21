@@ -10,12 +10,12 @@ import java.io.IOException;
 @WebServlet("/hi")
 public class HiServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String name = req.getParameter("name");
-        String age = req.getParameter("age");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String name = request.getParameter("name");
+        String age = request.getParameter("age");
 
-        resp.getWriter().println("Name: "+ name);
-        resp.getWriter().println("Age: " + age);
+        response.getWriter().println("Name: " + name);
+        response.getWriter().println("Age: " + age);
 
     }
 }
